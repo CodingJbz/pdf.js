@@ -41,7 +41,7 @@ var defaultMimeType = 'application/octet-stream';
 
 function WebServer() {
   this.root = '.';
-  this.host = 'localhost';
+  this.host = '192.168.2.225';
   this.port = 0;
   this.server = null;
   this.verbose = false;
@@ -58,7 +58,7 @@ WebServer.prototype = {
     this.server = http.createServer(this._handler.bind(this));
     this.server.listen(this.port, this.host, callback);
     console.log(
-      'Server running at http://' + this.host + ':' + this.port + '/');
+      'Server1 running at http://' + this.host + ':' + this.port + '/');
   },
   stop: function (callback) {
     this.server.close(callback);
